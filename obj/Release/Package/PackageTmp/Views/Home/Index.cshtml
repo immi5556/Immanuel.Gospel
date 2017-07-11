@@ -1,0 +1,28 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+
+            function onLoad() {
+                var sec = parseInt(document.location.search.substr(1));
+
+                if (!isNaN(sec))
+                    mainPlayer.currentTime = sec;
+            }
+
+    </script>
+    <title>Partial Content Demonstration</title>
+</head>
+<body>
+    <h3>Partial Content Demonstration</h3>
+    <hr />
+    <video id="mainPlayer" width="640" height="360"
+           autoplay="autoplay" controls="controls" onloadeddata="onLoad()">
+        <source src="api/media/play?f=Theo Gods Truth-Good News.mp4&p=Theo" />
+    </video>
+</body>
+</html>
