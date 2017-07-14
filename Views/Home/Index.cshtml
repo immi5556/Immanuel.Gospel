@@ -6,8 +6,94 @@
 <html>
 <head>
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript">
+    <style>
+        .full-container {
+            background-color: floralwhite;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            position: fixed;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
 
+        .vid-item {
+            height: 85px;
+            width: 70px;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            display: inline-block;
+            margin-right: 10px;
+            border: 1px dashed red;
+        }
+
+        .vid-plr:hover {
+            background-image: url('/Content/Img/videosplash1.png');
+            background-size: contain;
+        }
+
+        .vid-plr {
+            background-image: url('/Content/Img/videosplash.png');
+            background-size: contain;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            align-content: center;
+            margin: -5px auto;
+        }
+
+        .vid-item span.vid-duration {
+            position: absolute;
+            bottom: 0;
+            left: 7px;
+        }
+
+        #popvid {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            padding: 15px;
+            width: 95%;
+            height: 95%;
+            background-color: black;
+            -ms-transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+            display: none;
+        }
+
+        #mainPlayer {
+            object-fit: fill;
+            width: 98%;
+            height: 98%;
+        }
+        .pcontain img:hover{
+            opacity: 1;
+        }
+        .pcontain img{
+            opacity: 0.2;
+            display: none;
+        }
+        .pcontain::-webkit-scrollbar {
+            height: 0;
+            width: 0;
+        }
+    </style>
+    <title>Gospel Videos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="full-container">
+    </div>
+    <div id="popvid">
+        <a id="clsvid" style="top:0;right:0;position: absolute;color: white;" href="javascript:void(0);"><img src="~/Content/Img/closeicon.png" width="25" height="25" /></a>
+        <video id="mainPlayer" controls="controls" onloadeddata="onLoad()">
+            <source src="" />
+        </video>
+    </div>
+    <script type="text/javascript">
         function onLoad() {
             var sec = parseInt(document.location.search.substr(1));
 
@@ -15,20 +101,57 @@
                 mainPlayer.currentTime = sec;
         }
 
-    </script>
-    <title>Gospel Videos</title>
-</head>
-<body>
-    <hr />
-    <div>
+        $(function () {
 
-    </div>
-    <hr />
-    <div style="position:fixed; left:0;top:0;overflow: hidden;">
-        <video id="mainPlayer" width="100%" height="100%"
-               controls="controls" onloadeddata="onLoad()">
-            <source src="/api/media/play?f=Theo Gods Truth-Good News.mp4&p=Theo" />
-        </video>
-    </div>
+            var buildHrs = function (hdata) {
+                $(".full-container").append("<h3>" + hdata + "</h3><hr/>");
+            }
+
+            var buildVidItem = function (vdata) {
+                var wdth = (((vdata || []).length || 1) * 85);
+                //var ccontain = $('<div style="height:100px;width:' + wdth + 'px;white-space:nowrap;overflow-x: hidden;overflow-y: hidden;"></div>');
+                var pcont = $('<div class="pcontain" style="height:100px;width:100%;white-space:nowrap;overflow-x:auto;overflow-y:hidden;position:relative;"><img class="img-left" style="position:absolute;left:0;bottom:-15px;z-index:101;padding-top:13px;" width="50" height="50" src="/Content/Img/left.png" /><img style="position:absolute;right:0;z-index:101;bottom:-15px;" class="img-right" width="50" height="50" src="/Content/Img/right.png" /></div>');
+                var ccontain = $('<div class="ccontain" style="height:100px;width:' + wdth + 'px;white-space:nowrap;padding-bottom:17px;"></div>');
+                $(pcont).append(ccontain);
+                (vdata || []).forEach(function (item) {
+                    var cblock = $('<div class="vid-item"></div>');
+                    cblock.append('<marquee direction="left" scrollamount="2" behavior="scroll">' + item.Name + '</marquee>');
+                    var ty = $('<div class="vid-plr"></div>');
+                    $(ty).data("dataassn", item);
+                    $(ty).on("click", function () {
+                        var tp = $(this).data("dataassn");
+                        $("#mainPlayer")[0].setAttribute("src", "/api/media/play?f=" + tp.Name + "&p=" + tp.Author);
+                        $("#mainPlayer")[0].load();
+                        $("#mainPlayer")[0].play();
+                        $("#popvid").show();
+                    });
+                    cblock.append(ty);
+                    cblock.append('<span class="vid-duration">' + item.Duraion + '</span>');
+                    ccontain.append(cblock);
+                });
+                $(".full-container").append(pcont);
+            }
+
+            $.getJSON("/api/Data/GetTopics", function (data) {
+                for (vi in data.Videos) {
+                    buildHrs(vi);
+                    buildVidItem(data.Videos[vi]);
+                }
+            });
+
+            $("#clsvid").on("click", function () {
+                $("#mainPlayer")[0].pause();
+                $("#popvid").hide();
+            });
+
+            $(document).on("click", ".img-left", function () {
+                $(this).closest(".pcontain").scrollLeft(-80);
+            });
+
+            $(document).on("click", ".img-right", function () {
+                $(this).closest(".pcontain").scrollLeft(80);
+            });
+        });
+    </script>
 </body>
 </html>

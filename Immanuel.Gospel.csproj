@@ -45,10 +45,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MediaToolkit, Version=1.1.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MediaToolkit.1.1.0.1\lib\net40\MediaToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -110,6 +114,7 @@
       <Private>True</Private>
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
@@ -151,6 +156,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\DataController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MediaController.cs" />
     <Compile Include="Global.asax.cs">
@@ -159,23 +165,51 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Vids\Theo\Theo Gods Truth-Abiding in Christ.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="App_Data\Vids\Theo\Theo Gods Truth-Good News.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="App_Data\Vids\Theo\Theo Gods Truth-Home Edition.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="App_Data\Vids\Theo\Theo Gods Truth-Light Unto My Path.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="App_Data\Vids\Theo\Theo Gods Truth-What is the Church.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="App_Data\ffmed_cmd.txt" />
+    <Content Include="App_Data\Vids\Chuck Missler\Learn the Bible in 24 Hours - Session 01 - Introduction.mp4" />
+    <Content Include="App_Data\Vids\Chuck Missler\Learn the Bible in 24 Hours - Session 02 - Creation And The Fall of Man.mp4" />
+    <Content Include="App_Data\Vids\Chuck Missler\Learn the Bible in 24 Hours - Session 03 - The Pre-historical Period.mp4" />
+    <Content Include="App_Data\Vids\Chuck Missler\Learn the Bible in 24 Hours - Session 04 - The Patriarchs.mp4" />
+    <Content Include="App_Data\Vids\Chuck Missler\Learn the Bible in 24 Hours - Session 05 - The Birth Of The Nation.mp4" />
+    <Content Include="App_Data\Vids\Chuck Missler\Learn the Bible in 24 Hours - Session 06 - In The Land.mp4" />
+    <Content Include="App_Data\Vids\Chuck Missler\Learn the Bible in 24 Hours - Session 07 - The Monarchy.mp4" />
+    <Content Include="App_Data\Vids\Chuck Missler\Learn the Bible in 24 Hours - Session 08 - The Poetical Books.mp4" />
+    <Content Include="App_Data\Vids\Ravo Zachrias\Discipline of a Godly Man _ Ravi Zacharias.....mp4" />
+    <Content Include="App_Data\Vids\Ravo Zachrias\Faith in the 21st Century _ Ravi Zacharias.mp4" />
+    <Content Include="App_Data\Vids\Ravo Zachrias\God%27s Plan For Your Life  -Ravi Zacharias..........mp4" />
+    <Content Include="App_Data\Vids\Ravo Zachrias\How to Measure Your Choices by Ravi Zacharias......mp4" />
+    <Content Include="App_Data\Vids\Ravo Zachrias\Overcoming Storms with God _ Ravi Zacharias........mp4" />
+    <Content Include="App_Data\Vids\Ravo Zachrias\Ravi Zacharias - Don%27t Let The Fears And The Regre.mp4" />
+    <Content Include="App_Data\Vids\Ravo Zachrias\Ravi Zacharias at 1983 Amsterdam Conference with B.mp4" />
+    <Content Include="App_Data\Vids\Ravo Zachrias\Ravi Zacharias God%27s Will.........mp4" />
+    <Content Include="App_Data\Vids\Ravo Zachrias\Ravi Zacharias_ Nothing can separate us from Jesus.mp4" />
+    <Content Include="App_Data\Vids\Ravo Zachrias\Serving God Where He Has Called Us to Serve _ Ravi.mp4" />
+    <Content Include="App_Data\Vids\Ravo Zachrias\The Lostness of Man - Ravi Zacharias 1986...mp4" />
+    <Content Include="App_Data\Vids\Ravo Zachrias\The problem of pleasure... Ravi zacharias.mp4" />
+    <Content Include="App_Data\Vids\Ravo Zachrias\The Struggle of the Soul _ Ravi Zacharias....mp4" />
+    <Content Include="App_Data\Vids\Theo\Theo Gods Truth-Abiding in Christ.mp4" />
+    <Content Include="App_Data\Vids\Theo\Theo Gods Truth-Good News.mp4" />
+    <Content Include="App_Data\Vids\Theo\Theo Gods Truth-Home Edition.mp4" />
+    <Content Include="App_Data\Vids\Theo\Theo Gods Truth-Light Unto My Path.mp4" />
+    <Content Include="App_Data\Vids\Theo\Theo Gods Truth-What is the Church.mp4" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\ffmpeg\ffmpeg.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\ffmpeg\ffplay.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\ffmpeg\ffprobe.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Img\closeicon.png" />
+    <Content Include="Content\Img\left.png" />
+    <Content Include="Content\Img\right.png" />
+    <Content Include="Content\Img\videosplash.jpg" />
+    <Content Include="Content\Img\videosplash.png" />
+    <Content Include="Content\Img\videosplash1.png" />
+    <Content Include="Content\Img\vid_run.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -211,6 +245,8 @@
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\Auds\" />
+    <Folder Include="App_Data\Vids\Nabeel\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

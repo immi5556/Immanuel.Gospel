@@ -71,8 +71,7 @@ C:\Immi\Personal\MyProjects\Gospel_Msg\Immanuel.Gospel\Immanuel.Gospel\bin\Micro
 C:\Immi\Personal\MyProjects\Gospel_Msg\Immanuel.Gospel\Immanuel.Gospel\obj\Debug\Immanuel.Gospel.csprojResolveAssemblyReference.cache
 C:\Immi\Personal\MyProjects\Gospel_Msg\Immanuel.Gospel\Immanuel.Gospel\obj\Debug\Immanuel.Gospel.dll
 C:\Immi\Personal\MyProjects\Gospel_Msg\Immanuel.Gospel\Immanuel.Gospel\obj\Debug\Immanuel.Gospel.pdb
-C:\Immi\Personal\MyProjects\Gospel_Msg\Immanuel.Gospel\Immanuel.Gospel\bin\App_Data\Vids\Theo\Theo Gods Truth-Abiding in Christ.mp4
-C:\Immi\Personal\MyProjects\Gospel_Msg\Immanuel.Gospel\Immanuel.Gospel\bin\App_Data\Vids\Theo\Theo Gods Truth-Good News.mp4
-C:\Immi\Personal\MyProjects\Gospel_Msg\Immanuel.Gospel\Immanuel.Gospel\bin\App_Data\Vids\Theo\Theo Gods Truth-Home Edition.mp4
-C:\Immi\Personal\MyProjects\Gospel_Msg\Immanuel.Gospel\Immanuel.Gospel\bin\App_Data\Vids\Theo\Theo Gods Truth-Light Unto My Path.mp4
-C:\Immi\Personal\MyProjects\Gospel_Msg\Immanuel.Gospel\Immanuel.Gospel\bin\App_Data\Vids\Theo\Theo Gods Truth-What is the Church.mp4
+C:\Immi\Personal\MyProjects\Gospel_Msg\Immanuel.Gospel\Immanuel.Gospel\bin\MediaToolkit.dll
+C:\Immi\Personal\MyProjects\Gospel_Msg\Immanuel.Gospel\Immanuel.Gospel\bin\Content\ffmpeg\ffmpeg.exe
+C:\Immi\Personal\MyProjects\Gospel_Msg\Immanuel.Gospel\Immanuel.Gospel\bin\Content\ffmpeg\ffplay.exe
+C:\Immi\Personal\MyProjects\Gospel_Msg\Immanuel.Gospel\Immanuel.Gospel\bin\Content\ffmpeg\ffprobe.exe

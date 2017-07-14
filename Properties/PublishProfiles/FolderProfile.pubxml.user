@@ -13,6 +13,72 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="ApplicationInsights.config">
       <publishTime>07/11/2017 22:46:39</publishTime>
     </File>
+    <File Include="App_Data/ffmed_cmd.txt">
+      <publishTime>07/13/2017 01:03:44</publishTime>
+    </File>
+    <File Include="App_Data/Vids/Chuck Missler/Learn the Bible in 24 Hours - Session 01 - Introduction.mp4">
+      <publishTime>07/13/2017 00:44:00</publishTime>
+    </File>
+    <File Include="App_Data/Vids/Chuck Missler/Learn the Bible in 24 Hours - Session 02 - Creation And The Fall of Man.mp4">
+      <publishTime>07/12/2017 20:24:02</publishTime>
+    </File>
+    <File Include="App_Data/Vids/Chuck Missler/Learn the Bible in 24 Hours - Session 03 - The Pre-historical Period.mp4">
+      <publishTime>07/12/2017 22:14:33</publishTime>
+    </File>
+    <File Include="App_Data/Vids/Chuck Missler/Learn the Bible in 24 Hours - Session 04 - The Patriarchs.mp4">
+      <publishTime>07/12/2017 22:19:34</publishTime>
+    </File>
+    <File Include="App_Data/Vids/Chuck Missler/Learn the Bible in 24 Hours - Session 05 - The Birth Of The Nation.mp4">
+      <publishTime>07/12/2017 23:18:20</publishTime>
+    </File>
+    <File Include="App_Data/Vids/Chuck Missler/Learn the Bible in 24 Hours - Session 06 - In The Land.mp4">
+      <publishTime>07/12/2017 23:23:31</publishTime>
+    </File>
+    <File Include="App_Data/Vids/Chuck Missler/Learn the Bible in 24 Hours - Session 07 - The Monarchy.mp4">
+      <publishTime>07/12/2017 23:35:00</publishTime>
+    </File>
+    <File Include="App_Data/Vids/Chuck Missler/Learn the Bible in 24 Hours - Session 08 - The Poetical Books.mp4">
+      <publishTime>07/12/2017 23:42:46</publishTime>
+    </File>
+    <File Include="App_Data/Vids/Ravo Zachrias/Discipline of a Godly Man _ Ravi Zacharias.....mp4">
+      <publishTime>07/12/2017 14:16:59</publishTime>
+    </File>
+    <File Include="App_Data/Vids/Ravo Zachrias/Faith in the 21st Century _ Ravi Zacharias.mp4">
+      <publishTime>07/12/2017 14:00:49</publishTime>
+    </File>
+    <File Include="App_Data/Vids/Ravo Zachrias/God%27s Plan For Your Life  -Ravi Zacharias..........mp4">
+      <publishTime>07/12/2017 14:11:22</publishTime>
+    </File>
+    <File Include="App_Data/Vids/Ravo Zachrias/How to Measure Your Choices by Ravi Zacharias......mp4">
+      <publishTime>07/12/2017 14:13:05</publishTime>
+    </File>
+    <File Include="App_Data/Vids/Ravo Zachrias/Overcoming Storms with God _ Ravi Zacharias........mp4">
+      <publishTime>07/12/2017 14:10:14</publishTime>
+    </File>
+    <File Include="App_Data/Vids/Ravo Zachrias/Ravi Zacharias - Don%27t Let The Fears And The Regre.mp4">
+      <publishTime>07/12/2017 14:14:38</publishTime>
+    </File>
+    <File Include="App_Data/Vids/Ravo Zachrias/Ravi Zacharias at 1983 Amsterdam Conference with B.mp4">
+      <publishTime>07/12/2017 14:18:29</publishTime>
+    </File>
+    <File Include="App_Data/Vids/Ravo Zachrias/Ravi Zacharias God%27s Will.........mp4">
+      <publishTime>07/12/2017 14:12:39</publishTime>
+    </File>
+    <File Include="App_Data/Vids/Ravo Zachrias/Ravi Zacharias_ Nothing can separate us from Jesus.mp4">
+      <publishTime>07/12/2017 14:16:03</publishTime>
+    </File>
+    <File Include="App_Data/Vids/Ravo Zachrias/Serving God Where He Has Called Us to Serve _ Ravi.mp4">
+      <publishTime>07/12/2017 14:09:44</publishTime>
+    </File>
+    <File Include="App_Data/Vids/Ravo Zachrias/The Lostness of Man - Ravi Zacharias 1986...mp4">
+      <publishTime>07/12/2017 14:18:01</publishTime>
+    </File>
+    <File Include="App_Data/Vids/Ravo Zachrias/The problem of pleasure... Ravi zacharias.mp4">
+      <publishTime>07/12/2017 14:19:05</publishTime>
+    </File>
+    <File Include="App_Data/Vids/Ravo Zachrias/The Struggle of the Soul _ Ravi Zacharias....mp4">
+      <publishTime>07/12/2017 14:17:39</publishTime>
+    </File>
     <File Include="App_Data/Vids/Theo/Theo Gods Truth-Abiding in Christ.mp4">
       <publishTime>07/11/2017 23:06:53</publishTime>
     </File>
@@ -37,6 +103,57 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/ApplicationInsights.config">
       <publishTime>07/11/2017 22:46:39</publishTime>
     </File>
+    <File Include="bin/App_Data/Vids/Chuck Missler/Learn the Bible in 24 Hours - Session 01 - Introduction.mp4">
+      <publishTime>07/12/2017 20:15:54</publishTime>
+    </File>
+    <File Include="bin/App_Data/Vids/Chuck Missler/Learn the Bible in 24 Hours - Session 02 - Creation And The Fall of Man.mp4">
+      <publishTime>07/12/2017 20:24:02</publishTime>
+    </File>
+    <File Include="bin/App_Data/Vids/Chuck Missler/Learn the Bible in 24 Hours - Session 03 - The Pre-historical Period.mp4">
+      <publishTime>07/12/2017 22:14:33</publishTime>
+    </File>
+    <File Include="bin/App_Data/Vids/Chuck Missler/Learn the Bible in 24 Hours - Session 04 - The Patriarchs.mp4">
+      <publishTime>07/12/2017 22:19:34</publishTime>
+    </File>
+    <File Include="bin/App_Data/Vids/Ravo Zachrias/Discipline of a Godly Man _ Ravi Zacharias.....mp4">
+      <publishTime>07/12/2017 14:16:59</publishTime>
+    </File>
+    <File Include="bin/App_Data/Vids/Ravo Zachrias/Faith in the 21st Century _ Ravi Zacharias.mp4">
+      <publishTime>07/12/2017 14:00:49</publishTime>
+    </File>
+    <File Include="bin/App_Data/Vids/Ravo Zachrias/God%27s Plan For Your Life  -Ravi Zacharias..........mp4">
+      <publishTime>07/12/2017 14:11:22</publishTime>
+    </File>
+    <File Include="bin/App_Data/Vids/Ravo Zachrias/How to Measure Your Choices by Ravi Zacharias......mp4">
+      <publishTime>07/12/2017 14:13:05</publishTime>
+    </File>
+    <File Include="bin/App_Data/Vids/Ravo Zachrias/Overcoming Storms with God _ Ravi Zacharias........mp4">
+      <publishTime>07/12/2017 14:10:14</publishTime>
+    </File>
+    <File Include="bin/App_Data/Vids/Ravo Zachrias/Ravi Zacharias - Don%27t Let The Fears And The Regre.mp4">
+      <publishTime>07/12/2017 14:14:38</publishTime>
+    </File>
+    <File Include="bin/App_Data/Vids/Ravo Zachrias/Ravi Zacharias at 1983 Amsterdam Conference with B.mp4">
+      <publishTime>07/12/2017 14:18:29</publishTime>
+    </File>
+    <File Include="bin/App_Data/Vids/Ravo Zachrias/Ravi Zacharias God%27s Will.........mp4">
+      <publishTime>07/12/2017 14:12:39</publishTime>
+    </File>
+    <File Include="bin/App_Data/Vids/Ravo Zachrias/Ravi Zacharias_ Nothing can separate us from Jesus.mp4">
+      <publishTime>07/12/2017 14:16:03</publishTime>
+    </File>
+    <File Include="bin/App_Data/Vids/Ravo Zachrias/Serving God Where He Has Called Us to Serve _ Ravi.mp4">
+      <publishTime>07/12/2017 14:09:44</publishTime>
+    </File>
+    <File Include="bin/App_Data/Vids/Ravo Zachrias/The Lostness of Man - Ravi Zacharias 1986...mp4">
+      <publishTime>07/12/2017 14:18:01</publishTime>
+    </File>
+    <File Include="bin/App_Data/Vids/Ravo Zachrias/The problem of pleasure... Ravi zacharias.mp4">
+      <publishTime>07/12/2017 14:19:05</publishTime>
+    </File>
+    <File Include="bin/App_Data/Vids/Ravo Zachrias/The Struggle of the Soul _ Ravi Zacharias....mp4">
+      <publishTime>07/12/2017 14:17:39</publishTime>
+    </File>
     <File Include="bin/App_Data/Vids/Theo/Theo Gods Truth-Abiding in Christ.mp4">
       <publishTime>07/11/2017 23:06:53</publishTime>
     </File>
@@ -52,11 +169,23 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/App_Data/Vids/Theo/Theo Gods Truth-What is the Church.mp4">
       <publishTime>07/11/2017 23:10:20</publishTime>
     </File>
+    <File Include="bin/Content/ffmpeg/ffmpeg.exe">
+      <publishTime>07/13/2017 00:03:58</publishTime>
+    </File>
+    <File Include="bin/Content/ffmpeg/ffplay.exe">
+      <publishTime>07/13/2017 00:03:58</publishTime>
+    </File>
+    <File Include="bin/Content/ffmpeg/ffprobe.exe">
+      <publishTime>07/13/2017 00:03:58</publishTime>
+    </File>
     <File Include="bin/Immanuel.Gospel.dll">
-      <publishTime>07/11/2017 23:32:43</publishTime>
+      <publishTime>07/13/2017 19:05:51</publishTime>
     </File>
     <File Include="bin/Immanuel.Gospel.pdb">
-      <publishTime>07/11/2017 23:32:43</publishTime>
+      <publishTime>07/13/2017 19:05:51</publishTime>
+    </File>
+    <File Include="bin/MediaToolkit.dll">
+      <publishTime>02/05/2016 22:12:02</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>12/01/2016 01:37:42</publishTime>
@@ -205,6 +334,36 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/bootstrap.min.css">
       <publishTime>07/11/2017 22:46:34</publishTime>
     </File>
+    <File Include="Content/ffmpeg/ffmpeg.exe">
+      <publishTime>07/13/2017 00:03:58</publishTime>
+    </File>
+    <File Include="Content/ffmpeg/ffplay.exe">
+      <publishTime>07/13/2017 00:03:58</publishTime>
+    </File>
+    <File Include="Content/ffmpeg/ffprobe.exe">
+      <publishTime>07/13/2017 00:03:58</publishTime>
+    </File>
+    <File Include="Content/Img/closeicon.png">
+      <publishTime>07/13/2017 22:40:18</publishTime>
+    </File>
+    <File Include="Content/Img/left.png">
+      <publishTime>07/14/2017 01:07:54</publishTime>
+    </File>
+    <File Include="Content/Img/right.png">
+      <publishTime>07/14/2017 01:07:39</publishTime>
+    </File>
+    <File Include="Content/Img/videosplash.jpg">
+      <publishTime>07/12/2017 19:12:49</publishTime>
+    </File>
+    <File Include="Content/Img/videosplash.png">
+      <publishTime>07/12/2017 21:03:41</publishTime>
+    </File>
+    <File Include="Content/Img/videosplash1.png">
+      <publishTime>07/12/2017 21:03:53</publishTime>
+    </File>
+    <File Include="Content/Img/vid_run.png">
+      <publishTime>07/12/2017 16:40:57</publishTime>
+    </File>
     <File Include="Content/Site.css">
       <publishTime>07/11/2017 22:46:31</publishTime>
     </File>
@@ -227,7 +386,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/11/2017 22:46:31</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>07/11/2017 22:46:40</publishTime>
+      <publishTime>07/12/2017 20:39:46</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>07/11/2017 22:46:34</publishTime>
@@ -266,7 +425,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/11/2017 22:46:37</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>07/11/2017 23:27:52</publishTime>
+      <publishTime>07/14/2017 01:40:49</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>07/11/2017 22:46:31</publishTime>
@@ -281,7 +440,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/11/2017 22:46:31</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>07/11/2017 23:32:43</publishTime>
+      <publishTime>07/12/2017 23:07:16</publishTime>
     </File>
   </ItemGroup>
 </Project>

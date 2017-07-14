@@ -1,0 +1,61 @@
+
+avi to mp4
+
+ffmpeg -i 1.avi -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 1.mp4
+
+
+
+
+
+
+ffmpeg -i 1.avi -c:v libx264 -crf 19 -preset slow -c:a libfdk_aac -b:a 192k -ac 2 1.mp4
+
+-- Unknown encoder 'libfdk_aac'
+
+ffmpeg -i 1.avi -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 1.mp4
+
+ffmpeg -i "Chuck Missler - Learn the Bible in 24 Hours - Session 02 - Creation And The Fall of Man.avi" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 "Chuck Missler - Learn the Bible in 24 Hours - Session 02 - Creation And The Fall of Man.mp4"
+
+ffmpeg -i "Chuck Missler - Learn the Bible in 24 Hours - Session 03 - The Pre-historical Period.avi" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 "Chuck Missler - Learn the Bible in 24 Hours - Session 03 - The Pre-historical Period.mp4"
+
+ffmpeg -i "Chuck Missler - Learn the Bible in 24 Hours - Session 04 - The Patriarchs.avi" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 "Chuck Missler - Learn the Bible in 24 Hours - Session 04 - The Patriarchs.mp4"
+
+ffmpeg -i "Chuck Missler - Learn the Bible in 24 Hours - Session 05 - The Birth Of The Nation.avi" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 "Chuck Missler - Learn the Bible in 24 Hours - Session 05 - The Birth Of The Nation.mp4"
+
+ffmpeg -i "Chuck Missler - Learn the Bible in 24 Hours - Session 06 - In The Land.avi" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 "Chuck Missler - Learn the Bible in 24 Hours - Session 06 - In The Land.mp4"
+
+ffmpeg -i "Chuck Missler - Learn the Bible in 24 Hours - Session 07 - The Monarchy.avi" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 "Chuck Missler - Learn the Bible in 24 Hours - Session 07 - The Monarchy.mp4"
+
+ffmpeg -i "Chuck Missler - Learn the Bible in 24 Hours - Session 08 - The Poetical Books.avi" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 "Chuck Missler - Learn the Bible in 24 Hours - Session 08 - The Poetical Books.mp4"
+
+ffmpeg -i "Chuck Missler - Learn the Bible in 24 Hours - Session 09 - The Book Of Daniel.avi" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 "Chuck Missler - Learn the Bible in 24 Hours - Session 09 - The Book Of Daniel.mp4"
+
+ffmpeg -i "Chuck Missler - Learn the Bible in 24 Hours - Session 10 - Post-Exile History.avi" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 "Chuck Missler - Learn the Bible in 24 Hours - Session 10 - Post-Exile History.mp4"
+
+ffmpeg -i "Chuck Missler - Learn the Bible in 24 Hours - Session 11 - The Major Prophets.avi" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 "Chuck Missler - Learn the Bible in 24 Hours - Session 11 - The Major Prophets.mp4"
+
+ffmpeg -i "Chuck Missler - Learn the Bible in 24 Hours - Session 12 - The Minor Prophets.avi" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 "Chuck Missler - Learn the Bible in 24 Hours - Session 12 - The Minor Prophets.mp4"
+
+ffmpeg -i "Chuck Missler - Learn the Bible in 24 Hours - Session 13 - How Sure Can We Be.avi" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 "Chuck Missler - Learn the Bible in 24 Hours - Session 13 - How Sure Can We Be.mp4"
+
+ffmpeg -i "Chuck Missler - Learn the Bible in 24 Hours - Session 14 - The New Testament.avi" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 "Chuck Missler - Learn the Bible in 24 Hours - Session 14 - The New Testament.mp4"
+
+ffmpeg -i "Chuck Missler - Learn the Bible in 24 Hours - Session 15 - The Gospels.avi" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 "Chuck Missler - Learn the Bible in 24 Hours - Session 15 - The Gospels.mp4"
+
+ffmpeg -i "Chuck Missler - Learn the Bible in 24 Hours - Session 16 -The Last Week.avi" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 "Chuck Missler - Learn the Bible in 24 Hours - Session 16 -The Last Week.mp4"
+
+ffmpeg -i "Chuck Missler - Learn the Bible in 24 Hours - Session 17 - The Book Of Acts.avi" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 "Chuck Missler - Learn the Bible in 24 Hours - Session 17 - The Book Of Acts.mp4"
+
+ffmpeg -i "Chuck Missler - Learn the Bible in 24 Hours - Session 18 - Romans.avi" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 "Chuck Missler - Learn the Bible in 24 Hours - Session 18 - Romans.mp4"
+
+ffmpeg -i "Chuck Missler - Learn the Bible in 24 Hours - Session 19 - The Church Epistles.avi" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 "Chuck Missler - Learn the Bible in 24 Hours - Session 19 - The Church Epistles.mp4"
+
+ffmpeg -i "Chuck Missler - Learn the Bible in 24 Hours - Session 20 - The Hebrew Christian Epistles.avi" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 "Chuck Missler - Learn the Bible in 24 Hours - Session 20 - The Hebrew Christian Epistles.mp4"
+
+ffmpeg -i "Chuck Missler - Learn the Bible in 24 Hours - Session 21 - Eschatologicial Summary.avi" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 "Chuck Missler - Learn the Bible in 24 Hours - Session 21 - Eschatologicial Summary.mp4"
+
+ffmpeg -i "Chuck Missler - Learn the Bible in 24 Hours - Session 22 - Revelation 1-3.avi" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 "Chuck Missler - Learn the Bible in 24 Hours - Session 22 - Revelation 1-3.mp4"
+
+ffmpeg -i "Chuck Missler - Learn the Bible in 24 Hours - Session 23 - Revelation 4-22.avi" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 "Chuck Missler - Learn the Bible in 24 Hours - Session 23 - Revelation 4-22.mp4"
+
+ffmpeg -i "Chuck Missler - Learn the Bible in 24 Hours - Session 24 - Conclusion.avi" -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 "Chuck Missler - Learn the Bible in 24 Hours - Session 24 - Conclusion.mp4"

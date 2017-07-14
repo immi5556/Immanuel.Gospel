@@ -5,24 +5,144 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script type="text/javascript">
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <style>
+        .full-container {
+            background-color: floralwhite;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            position: fixed;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
 
-            function onLoad() {
-                var sec = parseInt(document.location.search.substr(1));
+        .vid-item {
+            height: 85px;
+            width: 70px;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            display: inline-block;
+            margin-right: 10px;
+            border: 1px dashed red;
+        }
 
-                if (!isNaN(sec))
-                    mainPlayer.currentTime = sec;
-            }
+        .vid-plr:hover {
+            background-image: url('/Content/Img/videosplash1.png');
+            background-size: contain;
+        }
 
-    </script>
-    <title>Partial Content Demonstration</title>
+        .vid-plr {
+            background-image: url('/Content/Img/videosplash.png');
+            background-size: contain;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            align-content: center;
+            margin: -5px auto;
+        }
+
+        .vid-item span.vid-duration {
+            position: absolute;
+            bottom: 0;
+            left: 7px;
+        }
+
+        #popvid {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            padding: 15px;
+            width: 95%;
+            height: 95%;
+            background-color: black;
+            -ms-transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+            display: none;
+        }
+
+        #mainPlayer {
+            object-fit: fill;
+            width: 98%;
+            height: 98%;
+        }
+    </style>
+    <title>Gospel Videos</title>
 </head>
 <body>
-    <h3>Partial Content Demonstration</h3>
-    <hr />
-    <video id="mainPlayer" width="640" height="360"
-           autoplay="autoplay" controls="controls" onloadeddata="onLoad()">
-        <source src="api/media/play?f=Theo Gods Truth-Good News.mp4&p=Theo" />
-    </video>
+    <div class="full-container">
+        @*<h3>Ravi Zachrias</h3>
+            <hr />
+            <div style="height:90px;overflow-y: auto;">
+                <div class="vid-item">
+                    <marquee direction="left" behavior="scroll">Chuck Missler - Learn the Bible in 24 Hours - Session 01 - Introduction</marquee>
+                    <div class="vid-plr"></div>
+                    <span class="vid-duration">00:00:00</span>
+                </div>
+                <div class="vid-item">
+                    <marquee direction="left" behavior="scroll">Chuck Missler - Learn the Bible in 24 Hours - Session 01 - Introduction</marquee>
+                    <div class="vid-plr"></div>
+                    <span class="vid-duration">00:00:00</span>
+                </div>
+            </div>
+            <hr />*@
+    </div>
+    <div id="popvid">
+        <a id="clsvid" style="top:0;right:0;position: absolute;color: white;" href="javascript:void(0);">Close</a>
+        <video id="mainPlayer" controls="controls" onloadeddata="onLoad()">
+            <source src="" />
+        </video>
+    </div>
+    <script type="text/javascript">
+        function onLoad() {
+            var sec = parseInt(document.location.search.substr(1));
+
+            if (!isNaN(sec))
+                mainPlayer.currentTime = sec;
+        }
+
+        $(function () {
+
+            var buildHrs = function (hdata) {
+                $(".full-container").append("<h3>" + hdata + "</h3><hr/>");
+            }
+
+            var buildVidItem = function (vdata) {
+                var ccontain = $('<div style="height:90px;overflow-x: auto;overflow-y: hidden;"></div>');
+                (vdata || []).forEach(function (item) {
+                    var cblock = $('<div class="vid-item"></div>');
+                    cblock.append('<marquee direction="left" scrollamount="2" behavior="scroll">' + item.Name + '</marquee>');
+                    var ty = $('<div class="vid-plr"></div>');
+                    $(ty).data("dataassn", item);
+                    $(ty).on("click", function () {
+                        var tp = $(this).data("dataassn");
+                        $("#mainPlayer")[0].setAttribute("src", "/api/media/play?f=" + tp.Name + "&p=" + tp.Author);
+                        $("#mainPlayer")[0].load();
+                        $("#mainPlayer")[0].play();
+                        $("#popvid").show();
+                    });
+                    cblock.append(ty);
+                    cblock.append('<span class="vid-duration">' + item.Duraion + '</span>');
+                    ccontain.append(cblock);
+                });
+                $(".full-container").append(ccontain);
+            }
+
+            $.getJSON("/api/Data/GetTopics", function (data) {
+                for (vi in data.Videos) {
+                    buildHrs(vi);
+                    buildVidItem(data.Videos[vi]);
+                }
+            });
+
+            $("#clsvid").on("click", function () {
+                $("#mainPlayer")[0].pause();
+                $("#popvid").hide();
+            });
+        });
+    </script>
 </body>
 </html>
