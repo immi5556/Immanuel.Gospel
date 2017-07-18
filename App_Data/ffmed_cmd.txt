@@ -3,10 +3,62 @@ avi to mp4
 
 ffmpeg -i 1.avi -c:v libx264 -crf 19 -preset slow -c:a aac -b:a 192k -ac 2 1.mp4
 
+mp4 to avi
+
+ffmpeg -i "C:\Immi\Personal\MyProjects\ffmeg\Immanuel.Ffmpeg\Immanuel.Ffmpeg\App_Data\ffmpeg\sample.mp4" -vcodec copy -acodec copy "C:\Immi\Personal\MyProjects\ffmeg\Immanuel.Ffmpeg\Immanuel.Ffmpeg\App_Data\ffmpeg\sample_1.avi"
+
+wmv to mp4
+
+ffmpeg -i "C:\Immi\Personal\MyProjects\ffmeg\Immanuel.Ffmpeg\Immanuel.Ffmpeg\App_Data\ffmpeg\sample.wmv" -vcodec libx264 -pix_fmt yuv420p -profile:v baseline -preset slow -crf 22 -movflags +faststart "C:\Immi\Personal\MyProjects\ffmeg\Immanuel.Ffmpeg\Immanuel.Ffmpeg\App_Data\ffmpeg\sample_2.mp4"
+
+mp4 to wmv
+
+ffmpeg -i "C:\Immi\Personal\MyProjects\ffmeg\Immanuel.Ffmpeg\Immanuel.Ffmpeg\App_Data\ffmpeg\sample.mp4" -b 5000k -acodec wmav2 -vcodec wmv2 -ar 44100 -ab 56000 -ac 2 -y "C:\Immi\Personal\MyProjects\ffmeg\Immanuel.Ffmpeg\Immanuel.Ffmpeg\App_Data\ffmpeg\sample_1.wmv"
+
+mpeg to mp4
+ffmpeg -i "C:\Immi\Personal\MyProjects\ffmeg\Immanuel.Ffmpeg\Immanuel.Ffmpeg\App_Data\ffmpeg\sample.mpg" "C:\Immi\Personal\MyProjects\ffmeg\Immanuel.Ffmpeg\Immanuel.Ffmpeg\App_Data\ffmpeg\sample_3.mp4"
+
+mp4 to mpg
+ffmpeg -i "C:\Immi\Personal\MyProjects\ffmeg\Immanuel.Ffmpeg\Immanuel.Ffmpeg\App_Data\ffmpeg\sample.mp4" "C:\Immi\Personal\MyProjects\ffmeg\Immanuel.Ffmpeg\Immanuel.Ffmpeg\App_Data\ffmpeg\sample_1.mpg"
 
 
+mov to mp4
+ffmpeg -i "C:\Immi\Personal\MyProjects\ffmeg\Immanuel.Ffmpeg\Immanuel.Ffmpeg\App_Data\ffmpeg\sample.mov" -vcodec copy -acodec copy "C:\Immi\Personal\MyProjects\ffmeg\Immanuel.Ffmpeg\Immanuel.Ffmpeg\App_Data\ffmpeg\sample_4.mp4"
 
+mp4 to mov
+ffmpeg -i "C:\Immi\Personal\MyProjects\ffmeg\Immanuel.Ffmpeg\Immanuel.Ffmpeg\App_Data\ffmpeg\sample.mp4" -acodec copy -vcodec copy -f mov "C:\Immi\Personal\MyProjects\ffmeg\Immanuel.Ffmpeg\Immanuel.Ffmpeg\App_Data\ffmpeg\sample_1.mov"
 
+m4v to mp4
+ffmpeg -i "C:\Immi\Personal\MyProjects\ffmeg\Immanuel.Ffmpeg\Immanuel.Ffmpeg\App_Data\ffmpeg\sample.m4v" -vcodec copy -acodec copy "C:\Immi\Personal\MyProjects\ffmeg\Immanuel.Ffmpeg\Immanuel.Ffmpeg\App_Data\ffmpeg\sample_5.mp4"
+
+mp4 to m4v
+ffmpeg -i "C:\Immi\Personal\MyProjects\ffmeg\Immanuel.Ffmpeg\Immanuel.Ffmpeg\App_Data\ffmpeg\sample.mp4" -vcodec copy -acodec copy "C:\Immi\Personal\MyProjects\ffmeg\Immanuel.Ffmpeg\Immanuel.Ffmpeg\App_Data\ffmpeg\sample_1.m4v"
+
+mkv to mp4
+ffmpeg -i "C:\Immi\Personal\MyProjects\ffmeg\Immanuel.Ffmpeg\Immanuel.Ffmpeg\App_Data\ffmpeg\sample.mkv" -vcodec copy -acodec copy "C:\Immi\Personal\MyProjects\ffmeg\Immanuel.Ffmpeg\Immanuel.Ffmpeg\App_Data\ffmpeg\sample_6.mp4"
+
+mp4 to mkv
+ffmpeg -i "C:\Immi\Personal\MyProjects\ffmeg\Immanuel.Ffmpeg\Immanuel.Ffmpeg\App_Data\ffmpeg\sample.mp4" -vcodec copy -acodec copy "C:\Immi\Personal\MyProjects\ffmeg\Immanuel.Ffmpeg\Immanuel.Ffmpeg\App_Data\ffmpeg\sample_1.mkv"
+
+flv to mp4
+ffmpeg -i "C:\Immi\Personal\MyProjects\ffmeg\Immanuel.Ffmpeg\Immanuel.Ffmpeg\App_Data\ffmpeg\sample.flv" -qscale 0 -ar 22050 -vcodec libx264 "C:\Immi\Personal\MyProjects\ffmeg\Immanuel.Ffmpeg\Immanuel.Ffmpeg\App_Data\ffmpeg\sample_7.mp4"
+
+mp4 to flv
+ffmpeg -i "C:\Immi\Personal\MyProjects\ffmeg\Immanuel.Ffmpeg\Immanuel.Ffmpeg\App_Data\ffmpeg\sample.mp4" -c:v libx264 -ar 22050 -crf 28 "C:\Immi\Personal\MyProjects\ffmeg\Immanuel.Ffmpeg\Immanuel.Ffmpeg\App_Data\ffmpeg\sample_1.flv"
+
+webm to mp4
+ffmpeg -i "C:\Immi\Personal\MyProjects\ffmeg\Immanuel.Ffmpeg\Immanuel.Ffmpeg\App_Data\ffmpeg\sample.webm" -qscale 0 "C:\Immi\Personal\MyProjects\ffmeg\Immanuel.Ffmpeg\Immanuel.Ffmpeg\App_Data\ffmpeg\sample_8.mp4"
+
+mp4 to webm
+ffmpeg -i "C:\Immi\Personal\MyProjects\ffmeg\Immanuel.Ffmpeg\Immanuel.Ffmpeg\App_Data\ffmpeg\sample.mp4" -preset ultrafast "C:\Immi\Personal\MyProjects\ffmeg\Immanuel.Ffmpeg\Immanuel.Ffmpeg\App_Data\ffmpeg\sample_1.webm"
+
+avi to wmv
+ffmpeg -i sample.avi -qscale 2 -vcodec msmpeg4 -acodec wmav2 sample_2.wmv
+
+wmv to avi
+ffmpeg -i sample.wmv -vcodec libx264 -pix_fmt yuv420p -profile:v baseline -preset slow -crf 22 -movflags +faststart sample_2.avi
+
+------------
 
 ffmpeg -i 1.avi -c:v libx264 -crf 19 -preset slow -c:a libfdk_aac -b:a 192k -ac 2 1.mp4
 
