@@ -58,6 +58,8 @@ ffmpeg -i sample.avi -qscale 2 -vcodec msmpeg4 -acodec wmav2 sample_2.wmv
 wmv to avi
 ffmpeg -i sample.wmv -vcodec libx264 -pix_fmt yuv420p -profile:v baseline -preset slow -crf 22 -movflags +faststart sample_2.avi
 
+webm to wav
+
 ------------
 
 ffmpeg -i 1.avi -c:v libx264 -crf 19 -preset slow -c:a libfdk_aac -b:a 192k -ac 2 1.mp4
