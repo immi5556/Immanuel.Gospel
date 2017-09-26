@@ -385,6 +385,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Global.asax">
       <publishTime>07/11/2017 22:46:31</publishTime>
     </File>
+    <File Include="google58f1f49c594688bf.html">
+      <publishTime>08/13/2017 21:31:09</publishTime>
+    </File>
     <File Include="packages.config">
       <publishTime>07/12/2017 20:39:46</publishTime>
     </File>
@@ -424,8 +427,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/respond.min.js">
       <publishTime>07/11/2017 22:46:37</publishTime>
     </File>
+    <File Include="sitemap.xml">
+      <publishTime>08/13/2017 21:38:59</publishTime>
+    </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>07/14/2017 01:40:49</publishTime>
+      <publishTime>08/13/2017 21:22:30</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>07/11/2017 22:46:31</publishTime>
